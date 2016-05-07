@@ -29,11 +29,11 @@ public class WaveformController : MonoBehaviour
 
     void IsOn()
     {
-            Waveform.active = true;
-            character.EnterWaveform();
-            Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, true);
-            Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, true);
-            Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, true);
+        Waveform.active = true;
+        character.EnterWaveform();
+        Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, true);
+        Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, true);
+        Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, true);
 
     }
 
@@ -46,14 +46,14 @@ public class WaveformController : MonoBehaviour
         Waveform.active = false;
         character.ExitWaveform();
     }
-	// Update is called once per frame
-	void Update () 
+    // Update is called once per frame
+    void Update()
     {
-        if(CrossPlatformInputManager.GetButtonDown("Fire1") && WaveFormEnergy > 4)
+        if (CrossPlatformInputManager.GetButtonDown("Fire1") && WaveFormEnergy > 4)
         {
             IsOn();
         }
-        else if(CrossPlatformInputManager.GetButtonUp("Fire1"))
+        else if (CrossPlatformInputManager.GetButtonUp("Fire1"))
         {
             IsOff();
         }
@@ -69,5 +69,25 @@ public class WaveformController : MonoBehaviour
         {
             WaveFormEnergy += WaveFormRegenerate;
         }
-   }
+
+        // Particle radius
+        if (!Waveform.active)
+        {
+            // Only find radius component in "if" statements so we don't load it each update
+            Transform radius = transform.Find("radius");
+            radius.position = transform.position; //radius follows player until they go in waveform
+            radius.GetComponent<SpriteRenderer>().enabled = false; // don't show radius when not in waveform
+            waveformLastPosition = radius.position;
+            radius.transform.localScale = new Vector2(2, 2); // default scale
+        }
+        else
+        {
+            Transform radius = transform.Find("radius");
+            radius.GetComponent<SpriteRenderer>().enabled = true;
+            radius.position = waveformLastPosition;
+
+            float speed = (this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f)*2;
+            radius.localScale += new Vector3(speed * Time.deltaTime, speed * Time.deltaTime, 0);
+        }
+    }
 }
