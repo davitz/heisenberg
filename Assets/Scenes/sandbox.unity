@@ -220,7 +220,7 @@ Transform:
   m_LocalScale: {x: 3, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &592922548
 Prefab:
   m_ObjectHideFlags: 0
@@ -287,6 +287,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 674c23718320e9d498cdad2a5bcd576a, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &915104427 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 435800, guid: 6c4329c4d3897e84c800b92a5897bd0c, type: 2}
+  m_PrefabInternal: {fileID: 1616864412}
 --- !u!1 &1102787880
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,11 +357,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1102787880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.31, y: -2.24, z: 0}
+  m_LocalPosition: {x: -7.64, y: -4.88, z: 0}
   m_LocalScale: {x: 0.45727283, y: 0.47778812, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 915104427}
+  m_RootOrder: 1
 --- !u!61 &1102787884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -520,7 +524,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1001 &1616864412
 Prefab:
   m_ObjectHideFlags: 0
@@ -585,6 +589,10 @@ MonoBehaviour:
   playerLayer: 8
   passableLayer: 9
   particleLayer: 10
+  WaveFormEnergy: 10
+  WaveFormDegenerate: 2
+  WaveFormRegenerate: 2
+  WaveFormMax: 10
 --- !u!1001 &1688940676
 Prefab:
   m_ObjectHideFlags: 0
