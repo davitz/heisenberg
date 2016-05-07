@@ -197,8 +197,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.91938, y: -6.3014917, z: -0.015625}
-  m_LocalScale: {x: 4.7175097, y: 4.7175126, z: 4.7175126}
+  m_LocalPosition: {x: -5.403988, y: -0.65496, z: 0}
+  m_LocalScale: {x: 0.96923447, y: 0.969235, z: 0.969235}
   m_Children:
   - {fileID: 430398}
   - {fileID: 432086}
@@ -260,7 +260,7 @@ Transform:
   m_GameObject: {fileID: 143938}
   m_LocalRotation: {x: -0.78637505, y: -0.38733616, z: -0.47004795, w: -0.10315001}
   m_LocalPosition: {x: -0.021250391, y: 0.04088167, z: 0}
-  m_LocalScale: {x: 1.3698628, y: 1.369863, z: 1.3698628}
+  m_LocalScale: {x: 1.2641411, y: 1.2641408, z: 1.2641406}
   m_Children:
   - {fileID: 481388}
   - {fileID: 411328}
@@ -338,7 +338,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124330}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -395,7 +395,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.19508463
 --- !u!58 &5836850
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -409,7 +409,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.18182765
 --- !u!95 &9550254
 Animator:
   serializedVersion: 3
@@ -453,6 +453,7 @@ MonoBehaviour:
   spin: 0
   startDirection: 0
   speed: 20
+  visibleInWaveForm: 0
 --- !u!198 &19802998
 ParticleSystem:
   m_ObjectHideFlags: 1
