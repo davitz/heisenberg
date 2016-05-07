@@ -23,7 +23,8 @@ public class WaveformController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Fire2"))
+
+        if (CrossPlatformInputManager.GetAxis("Fire2") == -1)
         {
             Waveform.active = true;
             character.EnterWaveform();
@@ -32,7 +33,7 @@ public class WaveformController : MonoBehaviour
             Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, true);
 
         }
-        else if (CrossPlatformInputManager.GetButtonUp("Fire2"))
+        else if (CrossPlatformInputManager.GetAxis("Fire2") != -1)
         {
             Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, false);
             Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, false);
@@ -58,7 +59,7 @@ public class WaveformController : MonoBehaviour
             radius.GetComponent<SpriteRenderer>().enabled = true;
             radius.position = waveformLastPosition;
 
-            float speed = (this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f) * 2.0f;
+            float speed = (this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f) * 2.0f; // why do we multiply by 2? i don't know stop asking questions
             radius.localScale += new Vector3(speed * Time.deltaTime, speed * Time.deltaTime, 0);
         }
 
