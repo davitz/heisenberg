@@ -38,6 +38,11 @@ namespace UnityStandardAssets._2D
                 finalKey = true;
             }
         }
+
+        public bool HasKey()
+        {
+            return finalKey;
+        }
         private void FixedUpdate()
         {
             m_Grounded = false;
