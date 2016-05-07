@@ -187,20 +187,6 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11420576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f42adfcc678bcf41a41fa72af71d3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLayer: 8
-  passableLayer: 9
-  particleLayer: 10
 --- !u!114 &11440982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,6 +216,7 @@ MonoBehaviour:
   WaveFormDegenerate: 2
   WaveFormRegenerate: 2
   WaveFormMax: 100
+  WaveFormMin: 1
 --- !u!212 &21202608
 SpriteRenderer:
   m_ObjectHideFlags: 1
