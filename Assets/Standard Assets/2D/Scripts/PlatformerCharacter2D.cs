@@ -26,11 +26,7 @@ namespace UnityStandardAssets._2D
         private bool finalKey = false; //FinalKey will be flipped to true when the key is collected.
 
         private bool waveform = false;
-        public int WaveFormEnergy = 100;
-        public int WaveFormDegenerate = 2;
-        public int WaveFormRegenerate = 2;
-        public int WaveFormMax = 100;
-
+        
         private Vector2 waveformVel = new Vector2(0, 0);
 
         private Rigidbody2D rigidBody;
@@ -59,15 +55,6 @@ namespace UnityStandardAssets._2D
 
                 // set velocity to waveform velocity
                 rigidBody.velocity = waveformVel;
-                WaveFormEnergy -= WaveFormDegenerate;
-                if (WaveFormEnergy < 0.1)
-                {
-                    waveform = false;
-                }
-            }
-            if(WaveFormEnergy < WaveFormMax-1)
-            {
-                WaveFormEnergy += WaveFormRegenerate;
             }
             
         }
