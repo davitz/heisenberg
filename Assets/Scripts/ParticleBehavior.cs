@@ -2,10 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
+
+
+
+// possible particle types
 public enum ParticleType { A, B, C }
 
+// possible particle spins
 public enum ParticleSpin { UP, DOWN }
 
+// possible particle starting directions
 public enum ParticleDirection { N, S, W, E, NW, NE, SW, SE }
 
 public class ParticleBehavior : MonoBehaviour
@@ -17,12 +23,89 @@ public class ParticleBehavior : MonoBehaviour
 
     public ParticleDirection startDirection = ParticleDirection.N;
 
-    private bool waveForm = false;
-
     public float speed = 20.0f;
+
+    public bool visibleInWaveForm = false;
 
     private Rigidbody2D rigidBody;
 
+    private bool waveForm = false;
+
+    private MeshRenderer renderer;
+
+
+
+    // Use this for initialization
+    void Start()
+    {
+        renderer = GetComponentInChildren<MeshRenderer>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody.velocity = normalizeVel(initDir());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // check if player has just activated/deactivated waveform
+        if (Waveform.active && !waveForm)
+        { enterWaveform(); }
+        else if (!Waveform.active && waveForm)
+        { exitWaveform(); }
+
+        rigidBody.velocity = normalizeVel(rigidBody.velocity);
+    }
+
+
+
+
+    // triggered when player activates waveform
+    private void enterWaveform()
+    {
+        // rotate velocity according to spin
+        switch (spin)
+        {
+            case ParticleSpin.UP:
+                rigidBody.velocity = Quaternion.Euler(0, 0, -90) * normalizeVel(rigidBody.velocity);
+                break;
+            case ParticleSpin.DOWN:
+                rigidBody.velocity = Quaternion.Euler(0, 0, 90) * normalizeVel(rigidBody.velocity);
+                break;
+        }
+
+
+        // hide unless visibleInWaveform is enabled
+        if (!visibleInWaveForm)
+        {
+            renderer.enabled = false;
+        }
+
+
+        waveForm = true;
+    }
+
+    // triggered when player deactivates waveform
+    private void exitWaveform()
+    {
+        // reverse velocity rotation according to spin
+        switch (spin)
+        {
+            case ParticleSpin.UP:
+                rigidBody.velocity = Quaternion.Euler(0, 0, 90) * normalizeVel(rigidBody.velocity);
+                break;
+            case ParticleSpin.DOWN:
+                rigidBody.velocity = Quaternion.Euler(0, 0, -90) * normalizeVel(rigidBody.velocity);
+                break;
+        }
+
+
+        // unhide
+        renderer.enabled = true;
+
+
+        waveForm = false;
+    }
+
+    // takes a velocity vector and returns the closest velocity vector that is allowed for this particle
     private Vector2 normalizeVel(Vector2 vel)
     {
         switch (type)
@@ -90,7 +173,8 @@ public class ParticleBehavior : MonoBehaviour
         return new Vector2(0, 0);
     }
 
-    Vector2 initialVel()
+    // generates an initial direction vector for the particle based on the startDirection setting 
+    Vector2 initDir()
     {
         switch (startDirection)
         {
@@ -117,16 +201,6 @@ public class ParticleBehavior : MonoBehaviour
     }
 
 
-    // Use this for initialization
-    void Start()
-    {
-        rigidBody = GetComponent<Rigidbody2D>();
-        rigidBody.velocity = normalizeVel(initialVel());
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        rigidBody.velocity = normalizeVel(rigidBody.velocity);
-    }
 }
+
