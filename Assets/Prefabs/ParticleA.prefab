@@ -509,7 +509,7 @@ MonoBehaviour:
   type: 0
   spin: 0
   startDirection: 0
-  speed: 20
+  speed: 10
   visibleInWaveForm: 0
 --- !u!198 &19802998
 ParticleSystem:

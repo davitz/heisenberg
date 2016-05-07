@@ -13,10 +13,11 @@ public class WaveformController : MonoBehaviour
 
     Vector2 waveformLastPosition = Vector2.zero; // Character's last position to "freeze" the radius
 
-    public int WaveFormEnergy = 10;
-    public int WaveFormDegenerate = 2;
-    public int WaveFormRegenerate = 2;
-    public int WaveFormMax = 10;
+    public double WaveFormEnergy = 5;
+    public double WaveFormDegenerate = 2;
+    public double WaveFormRegenerate = 2;
+    public double WaveFormMax = 5;
+    public double WaveFormMin = 1;
 
 
     // Use this for initialization
@@ -51,6 +52,7 @@ public class WaveformController : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Fire1") && WaveFormEnergy > 4)
         {
+            
             IsOn();
         }
         else if (CrossPlatformInputManager.GetButtonUp("Fire1"))
@@ -59,15 +61,16 @@ public class WaveformController : MonoBehaviour
         }
         if (Waveform.active)
         {
-            WaveFormEnergy -= WaveFormDegenerate;
-            if (WaveFormEnergy < 1)
+            //Debug.Log(WaveFormEnergy);
+            WaveFormEnergy -= WaveFormDegenerate * Time.deltaTime;
+            if (WaveFormEnergy < WaveFormMin)
             {
                 IsOff();
             }
         }
-        else
+        else if (WaveFormEnergy < WaveFormMax)
         {
-            WaveFormEnergy += WaveFormRegenerate;
+            WaveFormEnergy += WaveFormRegenerate * Time.deltaTime;
         }
 
         // Particle radius
