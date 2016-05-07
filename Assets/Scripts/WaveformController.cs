@@ -58,7 +58,7 @@ public class WaveformController : MonoBehaviour
             radius.GetComponent<SpriteRenderer>().enabled = true;
             radius.position = waveformLastPosition;
 
-            float speed = this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f;
+            float speed = (this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f) * 2.0f;
             radius.localScale += new Vector3(speed * Time.deltaTime, speed * Time.deltaTime, 0);
         }
 
