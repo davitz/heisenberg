@@ -33,7 +33,6 @@ namespace UnityStandardAssets._2D
         private MeshRenderer mesh;
         private SpriteRenderer sprite;
 
-
         void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();

@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets._2D;
-public class WaveformController : MonoBehaviour {
+public class WaveformController : MonoBehaviour
+{
 
     public int playerLayer = 8;
     public int passableLayer = 9;
@@ -10,18 +11,22 @@ public class WaveformController : MonoBehaviour {
 
     PlatformerCharacter2D character;
 
+    Vector2 waveformLastPosition = Vector2.zero; // Character's last position to "freeze" the radius
+
     public double WaveFormEnergy = 5;
     public double WaveFormDegenerate = 2;
     public double WaveFormRegenerate = 2;
     public double WaveFormMax = 5;
     public double WaveFormMin = 1;
 
+
     // Use this for initialization
-    void Start () 
+    void Start()
     {
         character = GetComponent<PlatformerCharacter2D>();
         Waveform.active = false;
-	}
+    }
+
 
     void IsOn()
     {
@@ -30,6 +35,7 @@ public class WaveformController : MonoBehaviour {
             Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, true);
             Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, true);
             Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, true);
+
     }
 
     void IsOff()
