@@ -33,6 +33,8 @@ public class ParticleBehavior : MonoBehaviour
 
     private MeshRenderer renderer;
 
+    private GameObject effectContainer;
+
 
 
     // Use this for initialization
@@ -41,6 +43,7 @@ public class ParticleBehavior : MonoBehaviour
         renderer = GetComponentInChildren<MeshRenderer>();
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.velocity = normalizeVel(initDir());
+        effectContainer = transform.Find("EffectContainer").gameObject;
     }
 
     // Update is called once per frame
@@ -77,6 +80,7 @@ public class ParticleBehavior : MonoBehaviour
         if (!visibleInWaveForm)
         {
             renderer.enabled = false;
+            effectContainer.SetActive(false);
         }
 
 
@@ -100,6 +104,7 @@ public class ParticleBehavior : MonoBehaviour
 
         // unhide
         renderer.enabled = true;
+        effectContainer.SetActive(true);
 
 
         waveForm = false;
