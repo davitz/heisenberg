@@ -26,6 +26,10 @@ namespace UnityStandardAssets._2D
         private bool finalKey = false; //FinalKey will be flipped to true when the key is collected.
 
         private bool waveform = false;
+        public int WaveFormEnergy = 100;
+        public int WaveFormDegenerate = 2;
+        public int WaveFormRegenerate = 2;
+        public int WaveFormMax = 100;
 
         private Vector2 waveformVel = new Vector2(0, 0);
 
@@ -47,7 +51,7 @@ namespace UnityStandardAssets._2D
             if(waveform)
             {
                 // if the X or Y directions have been completely reversed, lock in new direction and continue at locked in speed
-                if(rigidBody.velocity.x + waveformVel.x < waveformVel.x
+                if (rigidBody.velocity.x + waveformVel.x < waveformVel.x
                     || rigidBody.velocity.y + waveformVel.y < waveformVel.y)
                 {
                     waveformVel = rigidBody.velocity.normalized * waveformVel.magnitude; 
@@ -55,7 +59,17 @@ namespace UnityStandardAssets._2D
 
                 // set velocity to waveform velocity
                 rigidBody.velocity = waveformVel;
+                WaveFormEnergy -= WaveFormDegenerate;
+                if (WaveFormEnergy < 0.1)
+                {
+                    waveform = false;
+                }
             }
+            if(WaveFormEnergy < WaveFormMax-1)
+            {
+                WaveFormEnergy += WaveFormRegenerate;
+            }
+            
         }
 
         public void EnterWaveform()
@@ -69,7 +83,6 @@ namespace UnityStandardAssets._2D
                 //mesh.enabled = false;
                 sprite.enabled = false;
             }
-
             waveform = true;
         }
 
@@ -131,7 +144,6 @@ namespace UnityStandardAssets._2D
         {
             if (!waveform)
             {
-
                 // If crouching, check to see if the character can stand up
                 if (!crouch && m_Anim.GetBool("Crouch"))
                 {
