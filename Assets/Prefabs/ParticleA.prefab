@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 437606}
   - 198: {fileID: 19802998}
   - 199: {fileID: 19964314}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle glow master 012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 430200}
   - 198: {fileID: 19821306}
   - 199: {fileID: 19904286}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle glow master 102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 411328}
   - 198: {fileID: 19897850}
   - 199: {fileID: 19964794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: particle glow slave birth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - 50: {fileID: 5011210}
   - 58: {fileID: 5836850}
   - 114: {fileID: 11431600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ParticleA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - 4: {fileID: 421948}
   - 198: {fileID: 19810256}
   - 199: {fileID: 19984012}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle glow master 201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - 4: {fileID: 481388}
   - 198: {fileID: 19880464}
   - 199: {fileID: 19950890}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle core glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - 4: {fileID: 432086}
   - 198: {fileID: 19813410}
   - 95: {fileID: 9550254}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spiral_02.3 Domain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - 4: {fileID: 499224}
   - 198: {fileID: 19804742}
   - 199: {fileID: 19912758}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle glow master 210
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - 4: {fileID: 487488}
   - 198: {fileID: 19872332}
   - 199: {fileID: 19956288}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle glow master 120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - 4: {fileID: 466484}
   - 198: {fileID: 19872186}
   - 199: {fileID: 19958118}
-  m_Layer: 1
+  m_Layer: 10
   m_Name: particle glow master 021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - 4: {fileID: 430398}
   - 114: {fileID: 11404712}
   - 58: {fileID: 5830738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Killzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2

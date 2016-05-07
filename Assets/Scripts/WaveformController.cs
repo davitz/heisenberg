@@ -43,11 +43,11 @@ public class WaveformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if(CrossPlatformInputManager.GetButtonDown("Fire2") && WaveFormEnergy > 4)
+        if(CrossPlatformInputManager.GetButtonDown("Fire1") && WaveFormEnergy > 4)
         {
             IsOn();
         }
-        else if(CrossPlatformInputManager.GetButtonUp("Fire2"))
+        else if(CrossPlatformInputManager.GetButtonUp("Fire1"))
         {
             IsOff();
         }
