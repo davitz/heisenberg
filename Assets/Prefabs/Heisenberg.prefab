@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11440982}
   - 61: {fileID: 6137384}
   - 61: {fileID: 6154690}
+  - 114: {fileID: 11449082}
   m_Layer: 8
   m_Name: Heisenberg
   m_TagString: Player
@@ -197,6 +198,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11449082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f42adfcc678bcf41a41fa72af71d3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayer: 8
+  passableLayer: 9
+  particleLayer: 10
+  WaveFormEnergy: 100
+  WaveFormDegenerate: 2
+  WaveFormRegenerate: 2
+  WaveFormMax: 100
 --- !u!212 &21202608
 SpriteRenderer:
   m_ObjectHideFlags: 1

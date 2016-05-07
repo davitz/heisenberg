@@ -10,10 +10,11 @@ public class WaveformController : MonoBehaviour {
 
     PlatformerCharacter2D character;
 
-    public int WaveFormEnergy = 10;
-    public int WaveFormDegenerate = 2;
-    public int WaveFormRegenerate = 2;
-    public int WaveFormMax = 10;
+    public double WaveFormEnergy = 5;
+    public double WaveFormDegenerate = 2;
+    public double WaveFormRegenerate = 2;
+    public double WaveFormMax = 5;
+    public double WaveFormMin = 1;
 
     // Use this for initialization
     void Start () 
@@ -43,8 +44,9 @@ public class WaveformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if(CrossPlatformInputManager.GetButtonDown("Fire2") && WaveFormEnergy > 4)
+        if (CrossPlatformInputManager.GetButtonDown("Fire2") && WaveFormEnergy > 4)
         {
+            
             IsOn();
         }
         else if(CrossPlatformInputManager.GetButtonUp("Fire2"))
@@ -53,15 +55,17 @@ public class WaveformController : MonoBehaviour {
         }
         if (Waveform.active)
         {
-            WaveFormEnergy -= WaveFormDegenerate;
-            if (WaveFormEnergy < 1)
+            //Debug.Log(WaveFormEnergy);
+            WaveFormEnergy -= WaveFormDegenerate * Time.deltaTime;
+            if (WaveFormEnergy < WaveFormMin)
             {
                 IsOff();
             }
         }
-        else
+        else if (WaveFormEnergy < WaveFormMax)
         {
-            WaveFormEnergy += WaveFormRegenerate;
+            Debug.Log(WaveFormEnergy);
+            WaveFormEnergy += WaveFormRegenerate * Time.deltaTime;
         }
    }
 }
