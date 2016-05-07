@@ -33,7 +33,9 @@ public class ParticleBehavior : MonoBehaviour
 
     private MeshRenderer renderer;
 
+    private GameObject effectContainer;
 
+    Vector2 waveformLastPosition = Vector2.zero;
 
     // Use this for initialization
     void Start()
@@ -41,11 +43,33 @@ public class ParticleBehavior : MonoBehaviour
         renderer = GetComponentInChildren<MeshRenderer>();
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.velocity = normalizeVel(initDir());
+        effectContainer = transform.Find("EffectContainer").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        // Particle radius
+        if (!Waveform.active)
+        {
+            // Only find radius component in "if" statements so we don't load it each update
+            Transform radius = transform.Find("radius");
+            radius.position = transform.position;
+            radius.GetComponent<SpriteRenderer>().enabled = false;
+            waveformLastPosition = radius.position;
+            radius.transform.localScale = new Vector2(2, 2);
+        }
+        else
+        {
+            Transform radius = transform.Find("radius");
+            radius.GetComponent<SpriteRenderer>().enabled = true;
+            radius.position = waveformLastPosition;
+
+            float velocityPlusOne = (speed * Time.deltaTime) + 1;
+            radius.localScale = new Vector2(radius.localScale.x + velocityPlusOne, radius.localScale.y + velocityPlusOne);
+        }
+
         // check if player has just activated/deactivated waveform
         if (Waveform.active && !waveForm)
         { enterWaveform(); }
@@ -54,8 +78,6 @@ public class ParticleBehavior : MonoBehaviour
 
         rigidBody.velocity = normalizeVel(rigidBody.velocity);
     }
-
-
 
 
     // triggered when player activates waveform
@@ -77,6 +99,7 @@ public class ParticleBehavior : MonoBehaviour
         if (!visibleInWaveForm)
         {
             renderer.enabled = false;
+            effectContainer.SetActive(false);
         }
 
 
@@ -100,6 +123,7 @@ public class ParticleBehavior : MonoBehaviour
 
         // unhide
         renderer.enabled = true;
+        effectContainer.SetActive(true);
 
 
         waveForm = false;
@@ -199,8 +223,5 @@ public class ParticleBehavior : MonoBehaviour
 
         return new Vector2(0, 0);
     }
-
-
-
 }
 
