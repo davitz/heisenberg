@@ -33,7 +33,7 @@ public class ParticleBehavior : MonoBehaviour
 
     private MeshRenderer renderer;
 
-
+    Vector2 waveformLastPosition = Vector2.zero;
 
     // Use this for initialization
     void Start()
@@ -46,6 +46,27 @@ public class ParticleBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // Particle radius
+        if (!Waveform.active)
+        {
+            // Only find radius component in "if" statements so we don't load it each update
+            Transform radius = transform.Find("radius");
+            radius.position = transform.position;
+            radius.GetComponent<SpriteRenderer>().enabled = false;
+            waveformLastPosition = radius.position;
+            radius.transform.localScale = new Vector2(2, 2);
+        }
+        else
+        {
+            Transform radius = transform.Find("radius");
+            radius.GetComponent<SpriteRenderer>().enabled = true;
+            radius.position = waveformLastPosition;
+
+            float velocityPlusOne = (speed * Time.deltaTime) + 1;
+            radius.localScale = new Vector2(radius.localScale.x + velocityPlusOne, radius.localScale.y + velocityPlusOne);
+        }
+
         // check if player has just activated/deactivated waveform
         if (Waveform.active && !waveForm)
         { enterWaveform(); }
@@ -54,8 +75,6 @@ public class ParticleBehavior : MonoBehaviour
 
         rigidBody.velocity = normalizeVel(rigidBody.velocity);
     }
-
-
 
 
     // triggered when player activates waveform
@@ -199,8 +218,5 @@ public class ParticleBehavior : MonoBehaviour
 
         return new Vector2(0, 0);
     }
-
-
-
 }
 
