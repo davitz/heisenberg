@@ -3,13 +3,11 @@ using System.Collections;
 
 public class Dissapearing_Key : MonoBehaviour {
 
-    private MeshRenderer myRenderer;
     private Collider2D myCollider;
     private GameObject MyGO;
 
     private void Start()
     {
-        myRenderer = GetComponent <MeshRenderer>();
         myCollider = GetComponent<Collider2D>();
         MyGO = gameObject;
         
