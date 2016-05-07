@@ -13,6 +13,12 @@ public class WaveformController : MonoBehaviour
 
     Vector2 waveformLastPosition = Vector2.zero; // Character's last position to "freeze" the radius
 
+    public int WaveFormEnergy = 10;
+    public int WaveFormDegenerate = 2;
+    public int WaveFormRegenerate = 2;
+    public int WaveFormMax = 10;
+
+
     // Use this for initialization
     void Start()
     {
@@ -20,48 +26,48 @@ public class WaveformController : MonoBehaviour
         Waveform.active = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-        if (CrossPlatformInputManager.GetAxis("Fire2") == -1)
-        {
+    void IsOn()
+    {
             Waveform.active = true;
             character.EnterWaveform();
             Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, true);
             Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, true);
             Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, true);
 
-        }
-        else if (CrossPlatformInputManager.GetAxis("Fire2") != -1)
-        {
-            Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, false);
-            Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, false);
-            Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, false);
+    }
 
-            Waveform.active = false;
-            character.ExitWaveform();
-        }
+    void IsOff()
+    {
+        Physics2D.IgnoreLayerCollision(playerLayer, passableLayer, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, particleLayer, false);
+        Physics2D.IgnoreLayerCollision(particleLayer, passableLayer, false);
 
-        // Particle radius
-        if (!Waveform.active)
+        Waveform.active = false;
+        character.ExitWaveform();
+    }
+	// Update is called once per frame
+	void Update () 
+    {
+        if(CrossPlatformInputManager.GetButtonDown("Fire1") && WaveFormEnergy > 4)
         {
-            // Only find radius component in "if" statements so we don't load it each update
-            Transform radius = transform.Find("radius");
-            radius.position = transform.position; //radius follows player until they go in waveform
-            radius.GetComponent<SpriteRenderer>().enabled = false; // don't show radius when not in waveform
-            waveformLastPosition = radius.position;
-            radius.transform.localScale = new Vector2(2, 2); // default scale
+            IsOn();
+        }
+        else if(CrossPlatformInputManager.GetButtonUp("Fire1"))
+        {
+            IsOff();
+        }
+        if (Waveform.active)
+        {
+            WaveFormEnergy -= WaveFormDegenerate;
+            if (WaveFormEnergy < 1)
+            {
+                IsOff();
+            }
         }
         else
         {
-            Transform radius = transform.Find("radius");
-            radius.GetComponent<SpriteRenderer>().enabled = true;
-            radius.position = waveformLastPosition;
-
-            float speed = (this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f) * 2.0f; // why do we multiply by 2? i don't know stop asking questions
-            radius.localScale += new Vector3(speed * Time.deltaTime, speed * Time.deltaTime, 0);
+            WaveFormEnergy += WaveFormRegenerate;
         }
-
-    }
+   }
 }
