@@ -1,0 +1,1133 @@
+fileFormatVersion: 2
+guid: b3077e74824672649b39c7aebb767e2b
+timeCreated: 1462626248
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: back
+    100002: Bulb1
+    100004: Bulb2
+    100006: Device:group1
+    100008: Device:group2
+    100010: Device:group3
+    100012: Device:pCube10
+    100014: Device:pCube11
+    100016: Device:pCube12
+    100018: Device:pCube13
+    100020: Device:pCube14
+    100022: Device:pCube19
+    100024: Device:pCube20
+    100026: Device:pCube21
+    100028: Device:pCube4
+    100030: Device:pCube5
+    100032: Device:pCube6
+    100034: Device:pCube7
+    100036: Device:pCube8
+    100038: Device:pCube9
+    100040: Device:pCylinder2
+    100042: Device:pCylinder3
+    100044: Device:pCylinder4
+    100046: Device:pCylinder5
+    100048: Device:pCylinder6
+    100050: Device:polySurface1
+    100052: Device:polySurface1 1
+    100054: Device:polySurface10
+    100056: Device:polySurface11
+    100058: Device:polySurface12
+    100060: Device:polySurface13
+    100062: Device:polySurface14
+    100064: Device:polySurface15
+    100066: Device:polySurface16
+    100068: Device:polySurface17
+    100070: Device:polySurface18
+    100072: Device:polySurface2
+    100074: Device:polySurface3
+    100076: Device:polySurface4
+    100078: Device:polySurface5
+    100080: Device:polySurface6
+    100082: Device:polySurface7
+    100084: Device:polySurface8
+    100086: Device:polySurface9
+    100088: Device:pPlane1
+    100090: Device:pPlane2
+    100092: Device:pPlane3
+    100094: Device:pPlane4
+    100096: Device:transform1
+    100098: Device:transform10
+    100100: Device:transform11
+    100102: Device:transform12
+    100104: Device:transform13
+    100106: Device:transform14
+    100108: Device:transform15
+    100110: Device:transform16
+    100112: Device:transform17
+    100114: Device:transform18
+    100116: Device:transform19
+    100118: Device:transform2
+    100120: Device:transform20
+    100122: Device:transform21
+    100124: Device:transform22
+    100126: Device:transform23
+    100128: Device:transform24
+    100130: Device:transform25
+    100132: Device:transform26
+    100134: Device:transform27
+    100136: Device:transform28
+    100138: Device:transform29
+    100140: Device:transform30
+    100142: Device:transform31
+    100144: Device:transform32
+    100146: Device:transform33
+    100148: Device:transform34
+    100150: Device:transform35
+    100152: Device:transform36
+    100154: Device:transform37
+    100156: Device:transform38
+    100158: Device:transform39
+    100160: Device:transform40
+    100162: Device:transform41
+    100164: Device:transform42
+    100166: Device:transform43
+    100168: Device:transform44
+    100170: Device:transform45
+    100172: Device:transform5
+    100174: Device:transform6
+    100176: Device:transform7
+    100178: Device:transform8
+    100180: Device:transform9
+    100182: directionalLight1
+    100184: directionalLight2
+    100186: group1
+    100188: group2
+    100190: //RootNode
+    100192: L_Ankle
+    100194: L_Elbow
+    100196: L_Hip
+    100198: L_Knee
+    100200: L_Shoulder
+    100202: L_Wrist
+    100204: Lumbar
+    100206: Neck_1
+    100208: Neck_2
+    100210: Neck_3
+    100212: pCube10
+    100214: pCube11
+    100216: pCube12
+    100218: pCube13
+    100220: pCube14
+    100222: pCube17
+    100224: pCube18
+    100226: pCube19
+    100228: pCube20
+    100230: pCube21
+    100232: pCube22
+    100234: pCube4
+    100236: pCube5
+    100238: pCube6
+    100240: pCube7
+    100242: pCube8
+    100244: pCube9
+    100246: pCylinder2
+    100248: pCylinder3
+    100250: pCylinder4
+    100252: pCylinder5
+    100254: pCylinder6
+    100256: pPlane1
+    100258: pPlane2
+    100260: pPlane3
+    100262: pPlane4
+    100264: R_Ankle
+    100266: R_Elbow
+    100268: R_Hip
+    100270: R_Knee
+    100272: R_Shoulder
+    100274: R_Wrist
+    100276: Root
+    100278: Thoracic
+    100280: transform1
+    100282: transform10
+    100284: transform11
+    100286: transform12
+    100288: transform13
+    100290: transform14
+    100292: transform15
+    100294: transform16
+    100296: transform17
+    100298: transform18
+    100300: transform19
+    100302: transform2
+    100304: transform20
+    100306: transform21
+    100308: transform22
+    100310: transform23
+    100312: transform24
+    100314: transform25
+    100316: transform26
+    100318: transform3
+    100320: transform4
+    100322: transform5
+    100324: transform6
+    100326: transform7
+    100328: transform8
+    100330: transform9
+    400000: back
+    400002: Bulb1
+    400004: Bulb2
+    400006: Device:group1
+    400008: Device:group2
+    400010: Device:group3
+    400012: Device:pCube10
+    400014: Device:pCube11
+    400016: Device:pCube12
+    400018: Device:pCube13
+    400020: Device:pCube14
+    400022: Device:pCube19
+    400024: Device:pCube20
+    400026: Device:pCube21
+    400028: Device:pCube4
+    400030: Device:pCube5
+    400032: Device:pCube6
+    400034: Device:pCube7
+    400036: Device:pCube8
+    400038: Device:pCube9
+    400040: Device:pCylinder2
+    400042: Device:pCylinder3
+    400044: Device:pCylinder4
+    400046: Device:pCylinder5
+    400048: Device:pCylinder6
+    400050: Device:polySurface1
+    400052: Device:polySurface1 1
+    400054: Device:polySurface10
+    400056: Device:polySurface11
+    400058: Device:polySurface12
+    400060: Device:polySurface13
+    400062: Device:polySurface14
+    400064: Device:polySurface15
+    400066: Device:polySurface16
+    400068: Device:polySurface17
+    400070: Device:polySurface18
+    400072: Device:polySurface2
+    400074: Device:polySurface3
+    400076: Device:polySurface4
+    400078: Device:polySurface5
+    400080: Device:polySurface6
+    400082: Device:polySurface7
+    400084: Device:polySurface8
+    400086: Device:polySurface9
+    400088: Device:pPlane1
+    400090: Device:pPlane2
+    400092: Device:pPlane3
+    400094: Device:pPlane4
+    400096: Device:transform1
+    400098: Device:transform10
+    400100: Device:transform11
+    400102: Device:transform12
+    400104: Device:transform13
+    400106: Device:transform14
+    400108: Device:transform15
+    400110: Device:transform16
+    400112: Device:transform17
+    400114: Device:transform18
+    400116: Device:transform19
+    400118: Device:transform2
+    400120: Device:transform20
+    400122: Device:transform21
+    400124: Device:transform22
+    400126: Device:transform23
+    400128: Device:transform24
+    400130: Device:transform25
+    400132: Device:transform26
+    400134: Device:transform27
+    400136: Device:transform28
+    400138: Device:transform29
+    400140: Device:transform30
+    400142: Device:transform31
+    400144: Device:transform32
+    400146: Device:transform33
+    400148: Device:transform34
+    400150: Device:transform35
+    400152: Device:transform36
+    400154: Device:transform37
+    400156: Device:transform38
+    400158: Device:transform39
+    400160: Device:transform40
+    400162: Device:transform41
+    400164: Device:transform42
+    400166: Device:transform43
+    400168: Device:transform44
+    400170: Device:transform45
+    400172: Device:transform5
+    400174: Device:transform6
+    400176: Device:transform7
+    400178: Device:transform8
+    400180: Device:transform9
+    400182: directionalLight1
+    400184: directionalLight2
+    400186: group1
+    400188: group2
+    400190: //RootNode
+    400192: L_Ankle
+    400194: L_Elbow
+    400196: L_Hip
+    400198: L_Knee
+    400200: L_Shoulder
+    400202: L_Wrist
+    400204: Lumbar
+    400206: Neck_1
+    400208: Neck_2
+    400210: Neck_3
+    400212: pCube10
+    400214: pCube11
+    400216: pCube12
+    400218: pCube13
+    400220: pCube14
+    400222: pCube17
+    400224: pCube18
+    400226: pCube19
+    400228: pCube20
+    400230: pCube21
+    400232: pCube22
+    400234: pCube4
+    400236: pCube5
+    400238: pCube6
+    400240: pCube7
+    400242: pCube8
+    400244: pCube9
+    400246: pCylinder2
+    400248: pCylinder3
+    400250: pCylinder4
+    400252: pCylinder5
+    400254: pCylinder6
+    400256: pPlane1
+    400258: pPlane2
+    400260: pPlane3
+    400262: pPlane4
+    400264: R_Ankle
+    400266: R_Elbow
+    400268: R_Hip
+    400270: R_Knee
+    400272: R_Shoulder
+    400274: R_Wrist
+    400276: Root
+    400278: Thoracic
+    400280: transform1
+    400282: transform10
+    400284: transform11
+    400286: transform12
+    400288: transform13
+    400290: transform14
+    400292: transform15
+    400294: transform16
+    400296: transform17
+    400298: transform18
+    400300: transform19
+    400302: transform2
+    400304: transform20
+    400306: transform21
+    400308: transform22
+    400310: transform23
+    400312: transform24
+    400314: transform25
+    400316: transform26
+    400318: transform3
+    400320: transform4
+    400322: transform5
+    400324: transform6
+    400326: transform7
+    400328: transform8
+    400330: transform9
+    2300000: Device:polySurface1 1
+    3300000: Device:polySurface1 1
+    4300000: pCube22
+    4300002: Device:polySurface1
+    7400000: Idle
+    7400002: RunCycle
+    9500000: //RootNode
+    13700000: pCube22
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 9
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Bulb1
+        weight: 1
+      - path: Bulb2
+        weight: 1
+      - path: Device:group1
+        weight: 1
+      - path: Device:group1/Device:pCube4
+        weight: 1
+      - path: Device:group1/Device:pCube4/Device:transform24
+        weight: 1
+      - path: Device:group1/Device:pCube5
+        weight: 1
+      - path: Device:group1/Device:pCube5/Device:transform23
+        weight: 1
+      - path: Device:group1/Device:pCube6
+        weight: 1
+      - path: Device:group1/Device:pCube6/Device:transform22
+        weight: 1
+      - path: Device:group1/Device:pCube7
+        weight: 1
+      - path: Device:group1/Device:pCube7/Device:transform20
+        weight: 1
+      - path: Device:group1/Device:pCube8
+        weight: 1
+      - path: Device:group1/Device:pCube8/Device:transform19
+        weight: 1
+      - path: Device:group1/Device:pCube9
+        weight: 1
+      - path: Device:group1/Device:pCube9/Device:transform18
+        weight: 1
+      - path: Device:group1/Device:pCube10
+        weight: 1
+      - path: Device:group1/Device:pCube10/Device:transform17
+        weight: 1
+      - path: Device:group1/Device:pCube11
+        weight: 1
+      - path: Device:group1/Device:pCube11/Device:transform16
+        weight: 1
+      - path: Device:group1/Device:pCube12
+        weight: 1
+      - path: Device:group1/Device:pCube12/Device:transform15
+        weight: 1
+      - path: Device:group1/Device:pCube13
+        weight: 1
+      - path: Device:group1/Device:pCube13/Device:transform11
+        weight: 1
+      - path: Device:group1/Device:pCube14
+        weight: 1
+      - path: Device:group1/Device:pCube14/Device:transform7
+        weight: 1
+      - path: Device:group1/Device:pCylinder2
+        weight: 1
+      - path: Device:group1/Device:pCylinder2/Device:transform21
+        weight: 1
+      - path: Device:group1/Device:pCylinder3
+        weight: 1
+      - path: Device:group1/Device:pCylinder3/Device:transform14
+        weight: 1
+      - path: Device:group1/Device:pCylinder4
+        weight: 1
+      - path: Device:group1/Device:pCylinder4/Device:transform13
+        weight: 1
+      - path: Device:group1/Device:pCylinder5
+        weight: 1
+      - path: Device:group1/Device:pCylinder5/Device:transform10
+        weight: 1
+      - path: Device:group1/Device:pCylinder6
+        weight: 1
+      - path: Device:group1/Device:pCylinder6/Device:transform9
+        weight: 1
+      - path: Device:group1/Device:pPlane3
+        weight: 1
+      - path: Device:group1/Device:pPlane3/Device:transform12
+        weight: 1
+      - path: Device:group1/Device:pPlane4
+        weight: 1
+      - path: Device:group1/Device:pPlane4/Device:transform8
+        weight: 1
+      - path: Device:group2
+        weight: 1
+      - path: Device:group2/Device:transform26
+        weight: 1
+      - path: Device:group3
+        weight: 1
+      - path: Device:group3/Device:polySurface1
+        weight: 1
+      - path: Device:group3/Device:polySurface1/Device:transform45
+        weight: 1
+      - path: Device:group3/Device:polySurface2
+        weight: 1
+      - path: Device:group3/Device:polySurface2/Device:transform44
+        weight: 1
+      - path: Device:group3/Device:polySurface3
+        weight: 1
+      - path: Device:group3/Device:polySurface3/Device:transform43
+        weight: 1
+      - path: Device:group3/Device:polySurface4
+        weight: 1
+      - path: Device:group3/Device:polySurface4/Device:transform42
+        weight: 1
+      - path: Device:group3/Device:polySurface5
+        weight: 1
+      - path: Device:group3/Device:polySurface5/Device:transform41
+        weight: 1
+      - path: Device:group3/Device:polySurface6
+        weight: 1
+      - path: Device:group3/Device:polySurface6/Device:transform40
+        weight: 1
+      - path: Device:group3/Device:polySurface7
+        weight: 1
+      - path: Device:group3/Device:polySurface7/Device:transform39
+        weight: 1
+      - path: Device:group3/Device:polySurface8
+        weight: 1
+      - path: Device:group3/Device:polySurface8/Device:transform38
+        weight: 1
+      - path: Device:group3/Device:polySurface9
+        weight: 1
+      - path: Device:group3/Device:polySurface9/Device:transform37
+        weight: 1
+      - path: Device:group3/Device:polySurface10
+        weight: 1
+      - path: Device:group3/Device:polySurface10/Device:transform36
+        weight: 1
+      - path: Device:group3/Device:polySurface11
+        weight: 1
+      - path: Device:group3/Device:polySurface11/Device:transform35
+        weight: 1
+      - path: Device:group3/Device:polySurface12
+        weight: 1
+      - path: Device:group3/Device:polySurface12/Device:transform34
+        weight: 1
+      - path: Device:group3/Device:polySurface13
+        weight: 1
+      - path: Device:group3/Device:polySurface13/Device:transform33
+        weight: 1
+      - path: Device:group3/Device:polySurface14
+        weight: 1
+      - path: Device:group3/Device:polySurface14/Device:transform32
+        weight: 1
+      - path: Device:group3/Device:polySurface15
+        weight: 1
+      - path: Device:group3/Device:polySurface15/Device:transform31
+        weight: 1
+      - path: Device:group3/Device:polySurface16
+        weight: 1
+      - path: Device:group3/Device:polySurface16/Device:transform30
+        weight: 1
+      - path: Device:group3/Device:polySurface17
+        weight: 1
+      - path: Device:group3/Device:polySurface17/Device:transform29
+        weight: 1
+      - path: Device:group3/Device:polySurface18
+        weight: 1
+      - path: Device:group3/Device:polySurface18/Device:transform28
+        weight: 1
+      - path: Device:group3/Device:transform27
+        weight: 1
+      - path: Device:pCube19
+        weight: 1
+      - path: Device:pCube19/Device:transform6
+        weight: 1
+      - path: Device:pCube20
+        weight: 1
+      - path: Device:pCube20/Device:transform5
+        weight: 1
+      - path: Device:pCube21
+        weight: 1
+      - path: Device:pCube21/Device:transform25
+        weight: 1
+      - path: Device:pPlane1
+        weight: 1
+      - path: Device:pPlane1/Device:transform2
+        weight: 1
+      - path: Device:pPlane2
+        weight: 1
+      - path: Device:pPlane2/Device:transform1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: group1/pCube4
+        weight: 1
+      - path: group1/pCube4/transform24
+        weight: 1
+      - path: group1/pCube5
+        weight: 1
+      - path: group1/pCube5/transform23
+        weight: 1
+      - path: group1/pCube6
+        weight: 1
+      - path: group1/pCube6/transform22
+        weight: 1
+      - path: group1/pCube7
+        weight: 1
+      - path: group1/pCube7/transform20
+        weight: 1
+      - path: group1/pCube8
+        weight: 1
+      - path: group1/pCube8/transform19
+        weight: 1
+      - path: group1/pCube9
+        weight: 1
+      - path: group1/pCube9/transform18
+        weight: 1
+      - path: group1/pCube10
+        weight: 1
+      - path: group1/pCube10/transform17
+        weight: 1
+      - path: group1/pCube11
+        weight: 1
+      - path: group1/pCube11/transform16
+        weight: 1
+      - path: group1/pCube12
+        weight: 1
+      - path: group1/pCube12/transform15
+        weight: 1
+      - path: group1/pCube13
+        weight: 1
+      - path: group1/pCube13/transform11
+        weight: 1
+      - path: group1/pCube14
+        weight: 1
+      - path: group1/pCube14/transform7
+        weight: 1
+      - path: group1/pCylinder2
+        weight: 1
+      - path: group1/pCylinder2/transform21
+        weight: 1
+      - path: group1/pCylinder3
+        weight: 1
+      - path: group1/pCylinder3/transform14
+        weight: 1
+      - path: group1/pCylinder4
+        weight: 1
+      - path: group1/pCylinder4/transform13
+        weight: 1
+      - path: group1/pCylinder5
+        weight: 1
+      - path: group1/pCylinder5/transform10
+        weight: 1
+      - path: group1/pCylinder6
+        weight: 1
+      - path: group1/pCylinder6/transform9
+        weight: 1
+      - path: group1/pPlane3
+        weight: 1
+      - path: group1/pPlane3/transform12
+        weight: 1
+      - path: group1/pPlane4
+        weight: 1
+      - path: group1/pPlane4/transform8
+        weight: 1
+      - path: group2
+        weight: 1
+      - path: group2/transform26
+        weight: 1
+      - path: pCube17
+        weight: 1
+      - path: pCube17/transform4
+        weight: 1
+      - path: pCube18
+        weight: 1
+      - path: pCube18/transform3
+        weight: 1
+      - path: pCube19
+        weight: 1
+      - path: pCube19/transform6
+        weight: 1
+      - path: pCube20
+        weight: 1
+      - path: pCube20/transform5
+        weight: 1
+      - path: pCube21
+        weight: 1
+      - path: pCube21/transform25
+        weight: 1
+      - path: pCube22
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      - path: pPlane1/transform2
+        weight: 1
+      - path: pPlane2
+        weight: 1
+      - path: pPlane2/transform1
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/L_Hip
+        weight: 1
+      - path: Root/L_Hip/L_Knee
+        weight: 1
+      - path: Root/L_Hip/L_Knee/L_Ankle
+        weight: 1
+      - path: Root/Lumbar
+        weight: 1
+      - path: Root/Lumbar/Thoracic
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/L_Shoulder
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/Neck_2
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/Neck_2/Neck_3
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder/R_Elbow/R_Wrist/Device:polySurface1
+          1
+        weight: 1
+      - path: Root/R_Hip
+        weight: 1
+      - path: Root/R_Hip/R_Knee
+        weight: 1
+      - path: Root/R_Hip/R_Knee/R_Ankle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: RunCycle
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Bulb1
+        weight: 1
+      - path: Bulb2
+        weight: 1
+      - path: Device:group1
+        weight: 1
+      - path: Device:group1/Device:pCube4
+        weight: 1
+      - path: Device:group1/Device:pCube4/Device:transform24
+        weight: 1
+      - path: Device:group1/Device:pCube5
+        weight: 1
+      - path: Device:group1/Device:pCube5/Device:transform23
+        weight: 1
+      - path: Device:group1/Device:pCube6
+        weight: 1
+      - path: Device:group1/Device:pCube6/Device:transform22
+        weight: 1
+      - path: Device:group1/Device:pCube7
+        weight: 1
+      - path: Device:group1/Device:pCube7/Device:transform20
+        weight: 1
+      - path: Device:group1/Device:pCube8
+        weight: 1
+      - path: Device:group1/Device:pCube8/Device:transform19
+        weight: 1
+      - path: Device:group1/Device:pCube9
+        weight: 1
+      - path: Device:group1/Device:pCube9/Device:transform18
+        weight: 1
+      - path: Device:group1/Device:pCube10
+        weight: 1
+      - path: Device:group1/Device:pCube10/Device:transform17
+        weight: 1
+      - path: Device:group1/Device:pCube11
+        weight: 1
+      - path: Device:group1/Device:pCube11/Device:transform16
+        weight: 1
+      - path: Device:group1/Device:pCube12
+        weight: 1
+      - path: Device:group1/Device:pCube12/Device:transform15
+        weight: 1
+      - path: Device:group1/Device:pCube13
+        weight: 1
+      - path: Device:group1/Device:pCube13/Device:transform11
+        weight: 1
+      - path: Device:group1/Device:pCube14
+        weight: 1
+      - path: Device:group1/Device:pCube14/Device:transform7
+        weight: 1
+      - path: Device:group1/Device:pCylinder2
+        weight: 1
+      - path: Device:group1/Device:pCylinder2/Device:transform21
+        weight: 1
+      - path: Device:group1/Device:pCylinder3
+        weight: 1
+      - path: Device:group1/Device:pCylinder3/Device:transform14
+        weight: 1
+      - path: Device:group1/Device:pCylinder4
+        weight: 1
+      - path: Device:group1/Device:pCylinder4/Device:transform13
+        weight: 1
+      - path: Device:group1/Device:pCylinder5
+        weight: 1
+      - path: Device:group1/Device:pCylinder5/Device:transform10
+        weight: 1
+      - path: Device:group1/Device:pCylinder6
+        weight: 1
+      - path: Device:group1/Device:pCylinder6/Device:transform9
+        weight: 1
+      - path: Device:group1/Device:pPlane3
+        weight: 1
+      - path: Device:group1/Device:pPlane3/Device:transform12
+        weight: 1
+      - path: Device:group1/Device:pPlane4
+        weight: 1
+      - path: Device:group1/Device:pPlane4/Device:transform8
+        weight: 1
+      - path: Device:group2
+        weight: 1
+      - path: Device:group2/Device:transform26
+        weight: 1
+      - path: Device:group3
+        weight: 1
+      - path: Device:group3/Device:polySurface1
+        weight: 1
+      - path: Device:group3/Device:polySurface1/Device:transform45
+        weight: 1
+      - path: Device:group3/Device:polySurface2
+        weight: 1
+      - path: Device:group3/Device:polySurface2/Device:transform44
+        weight: 1
+      - path: Device:group3/Device:polySurface3
+        weight: 1
+      - path: Device:group3/Device:polySurface3/Device:transform43
+        weight: 1
+      - path: Device:group3/Device:polySurface4
+        weight: 1
+      - path: Device:group3/Device:polySurface4/Device:transform42
+        weight: 1
+      - path: Device:group3/Device:polySurface5
+        weight: 1
+      - path: Device:group3/Device:polySurface5/Device:transform41
+        weight: 1
+      - path: Device:group3/Device:polySurface6
+        weight: 1
+      - path: Device:group3/Device:polySurface6/Device:transform40
+        weight: 1
+      - path: Device:group3/Device:polySurface7
+        weight: 1
+      - path: Device:group3/Device:polySurface7/Device:transform39
+        weight: 1
+      - path: Device:group3/Device:polySurface8
+        weight: 1
+      - path: Device:group3/Device:polySurface8/Device:transform38
+        weight: 1
+      - path: Device:group3/Device:polySurface9
+        weight: 1
+      - path: Device:group3/Device:polySurface9/Device:transform37
+        weight: 1
+      - path: Device:group3/Device:polySurface10
+        weight: 1
+      - path: Device:group3/Device:polySurface10/Device:transform36
+        weight: 1
+      - path: Device:group3/Device:polySurface11
+        weight: 1
+      - path: Device:group3/Device:polySurface11/Device:transform35
+        weight: 1
+      - path: Device:group3/Device:polySurface12
+        weight: 1
+      - path: Device:group3/Device:polySurface12/Device:transform34
+        weight: 1
+      - path: Device:group3/Device:polySurface13
+        weight: 1
+      - path: Device:group3/Device:polySurface13/Device:transform33
+        weight: 1
+      - path: Device:group3/Device:polySurface14
+        weight: 1
+      - path: Device:group3/Device:polySurface14/Device:transform32
+        weight: 1
+      - path: Device:group3/Device:polySurface15
+        weight: 1
+      - path: Device:group3/Device:polySurface15/Device:transform31
+        weight: 1
+      - path: Device:group3/Device:polySurface16
+        weight: 1
+      - path: Device:group3/Device:polySurface16/Device:transform30
+        weight: 1
+      - path: Device:group3/Device:polySurface17
+        weight: 1
+      - path: Device:group3/Device:polySurface17/Device:transform29
+        weight: 1
+      - path: Device:group3/Device:polySurface18
+        weight: 1
+      - path: Device:group3/Device:polySurface18/Device:transform28
+        weight: 1
+      - path: Device:group3/Device:transform27
+        weight: 1
+      - path: Device:pCube19
+        weight: 1
+      - path: Device:pCube19/Device:transform6
+        weight: 1
+      - path: Device:pCube20
+        weight: 1
+      - path: Device:pCube20/Device:transform5
+        weight: 1
+      - path: Device:pCube21
+        weight: 1
+      - path: Device:pCube21/Device:transform25
+        weight: 1
+      - path: Device:pPlane1
+        weight: 1
+      - path: Device:pPlane1/Device:transform2
+        weight: 1
+      - path: Device:pPlane2
+        weight: 1
+      - path: Device:pPlane2/Device:transform1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: group1/pCube4
+        weight: 1
+      - path: group1/pCube4/transform24
+        weight: 1
+      - path: group1/pCube5
+        weight: 1
+      - path: group1/pCube5/transform23
+        weight: 1
+      - path: group1/pCube6
+        weight: 1
+      - path: group1/pCube6/transform22
+        weight: 1
+      - path: group1/pCube7
+        weight: 1
+      - path: group1/pCube7/transform20
+        weight: 1
+      - path: group1/pCube8
+        weight: 1
+      - path: group1/pCube8/transform19
+        weight: 1
+      - path: group1/pCube9
+        weight: 1
+      - path: group1/pCube9/transform18
+        weight: 1
+      - path: group1/pCube10
+        weight: 1
+      - path: group1/pCube10/transform17
+        weight: 1
+      - path: group1/pCube11
+        weight: 1
+      - path: group1/pCube11/transform16
+        weight: 1
+      - path: group1/pCube12
+        weight: 1
+      - path: group1/pCube12/transform15
+        weight: 1
+      - path: group1/pCube13
+        weight: 1
+      - path: group1/pCube13/transform11
+        weight: 1
+      - path: group1/pCube14
+        weight: 1
+      - path: group1/pCube14/transform7
+        weight: 1
+      - path: group1/pCylinder2
+        weight: 1
+      - path: group1/pCylinder2/transform21
+        weight: 1
+      - path: group1/pCylinder3
+        weight: 1
+      - path: group1/pCylinder3/transform14
+        weight: 1
+      - path: group1/pCylinder4
+        weight: 1
+      - path: group1/pCylinder4/transform13
+        weight: 1
+      - path: group1/pCylinder5
+        weight: 1
+      - path: group1/pCylinder5/transform10
+        weight: 1
+      - path: group1/pCylinder6
+        weight: 1
+      - path: group1/pCylinder6/transform9
+        weight: 1
+      - path: group1/pPlane3
+        weight: 1
+      - path: group1/pPlane3/transform12
+        weight: 1
+      - path: group1/pPlane4
+        weight: 1
+      - path: group1/pPlane4/transform8
+        weight: 1
+      - path: group2
+        weight: 1
+      - path: group2/transform26
+        weight: 1
+      - path: pCube17
+        weight: 1
+      - path: pCube17/transform4
+        weight: 1
+      - path: pCube18
+        weight: 1
+      - path: pCube18/transform3
+        weight: 1
+      - path: pCube19
+        weight: 1
+      - path: pCube19/transform6
+        weight: 1
+      - path: pCube20
+        weight: 1
+      - path: pCube20/transform5
+        weight: 1
+      - path: pCube21
+        weight: 1
+      - path: pCube21/transform25
+        weight: 1
+      - path: pCube22
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      - path: pPlane1/transform2
+        weight: 1
+      - path: pPlane2
+        weight: 1
+      - path: pPlane2/transform1
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/L_Hip
+        weight: 1
+      - path: Root/L_Hip/L_Knee
+        weight: 1
+      - path: Root/L_Hip/L_Knee/L_Ankle
+        weight: 1
+      - path: Root/Lumbar
+        weight: 1
+      - path: Root/Lumbar/Thoracic
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/L_Shoulder
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/Neck_2
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/Neck_2/Neck_3
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Root/Lumbar/Thoracic/Neck_1/R_Shoulder/R_Elbow/R_Wrist/Device:polySurface1
+          1
+        weight: 1
+      - path: Root/R_Hip
+        weight: 1
+      - path: Root/R_Hip/R_Knee
+        weight: 1
+      - path: Root/R_Hip/R_Knee/R_Ankle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
