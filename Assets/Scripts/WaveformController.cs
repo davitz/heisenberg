@@ -70,7 +70,6 @@ public class WaveformController : MonoBehaviour
         }
         else if (WaveFormEnergy < WaveFormMax)
         {
-            Debug.Log(WaveFormEnergy);
             WaveFormEnergy += WaveFormRegenerate * Time.deltaTime;
         }
    }

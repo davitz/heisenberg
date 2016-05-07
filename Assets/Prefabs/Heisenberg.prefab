@@ -221,6 +221,8 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< HEAD
+=======
 --- !u!114 &11420576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,6 +259,7 @@ MonoBehaviour:
   WaveFormDegenerate: 2
   WaveFormRegenerate: 2
   WaveFormMax: 10
+>>>>>>> refs/remotes/origin/dev
 --- !u!114 &11440982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,6 +289,7 @@ MonoBehaviour:
   WaveFormDegenerate: 2
   WaveFormRegenerate: 2
   WaveFormMax: 100
+  WaveFormMin: 1
 --- !u!212 &21202608
 SpriteRenderer:
   m_ObjectHideFlags: 1
