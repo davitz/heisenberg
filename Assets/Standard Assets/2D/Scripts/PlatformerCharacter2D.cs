@@ -32,12 +32,14 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D rigidBody;
         private MeshRenderer mesh;
         private SpriteRenderer sprite;
+        private GameObject visuals;
 
         void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();
             mesh = GetComponentInChildren<MeshRenderer>();
             sprite = GetComponent<SpriteRenderer>();
+            visuals = transform.FindChild("HeisenbergVisuals").gameObject;
         }
 
 
@@ -66,8 +68,9 @@ namespace UnityStandardAssets._2D
 
             if (!showInWaveform)
             {
+                visuals.SetActive(false);
                 //mesh.enabled = false;
-                sprite.enabled = false;
+                //sprite.enabled = false;
             }
             waveform = true;
         }
@@ -79,8 +82,9 @@ namespace UnityStandardAssets._2D
 
             rigidBody.gravityScale = 3;
 
+            visuals.SetActive(true);
             //mesh.enabled = true;
-            sprite.enabled = true;
+            //sprite.enabled = true;
             
         }
 
