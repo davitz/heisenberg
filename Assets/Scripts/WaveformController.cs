@@ -19,6 +19,8 @@ public class WaveformController : MonoBehaviour
     public double WaveFormMax = 5;
     public double WaveFormMin = 1;
 
+    Vector2 lastKnownPosition = Vector2.zero;
+
 
     // Use this for initialization
     void Start()
@@ -77,20 +79,37 @@ public class WaveformController : MonoBehaviour
         if (!Waveform.active)
         {
             // Only find radius component in "if" statements so we don't load it each update
-            Transform radius = transform.Find("radius");
-            radius.position = transform.position; //radius follows player until they go in waveform
-            radius.GetComponent<SpriteRenderer>().enabled = false; // don't show radius when not in waveform
-            waveformLastPosition = radius.position;
-            radius.transform.localScale = new Vector2(2, 2); // default scale
+
+            ParticleSystem particleSystem = this.GetComponentInChildren<ParticleSystem>();
+            ParticleSystem.ShapeModule shape = particleSystem.shape;
+            ParticleSystem.EmissionModule e = particleSystem.emission;
+
+            particleSystem.transform.position = this.transform.position;
+            lastKnownPosition = this.transform.position;
+            e.enabled = false; // unity freaks the fuck out if we don't do it this way
+            shape.radius = 1.0f;
         }
         else
         {
+
+            float speed = (this.GetComponent<Rigidbody2D>().velocity.magnitude);
+
+            ParticleSystem particleSystem = this.GetComponentInChildren<ParticleSystem>();
+            ParticleSystem.ShapeModule shape = particleSystem.shape;
+            ParticleSystem.EmissionModule e = particleSystem.emission;
+
+            particleSystem.transform.position = lastKnownPosition;
+            shape.radius += (speed * Time.deltaTime) / 2;
+            e.enabled = true;
+
+            /*
             Transform radius = transform.Find("radius");
             radius.GetComponent<SpriteRenderer>().enabled = true;
             radius.position = waveformLastPosition;
 
             float speed = (this.GetComponent<PlatformerCharacter2D>().GetComponent<Rigidbody2D>().velocity.magnitude + 1.0f)*2;
             radius.localScale += new Vector3(speed * Time.deltaTime, speed * Time.deltaTime, 0);
+            */
         }
     }
 }

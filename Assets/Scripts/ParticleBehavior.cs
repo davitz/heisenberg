@@ -35,7 +35,7 @@ public class ParticleBehavior : MonoBehaviour
 
     private GameObject effectContainer;
 
-    Vector2 waveformLastPosition = Vector2.zero;
+    Vector2 lastKnownPosition = Vector2.zero;
 
     // Use this for initialization
     void Start()
@@ -44,6 +44,9 @@ public class ParticleBehavior : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.velocity = normalizeVel(initDir());
         effectContainer = transform.Find("EffectContainer").gameObject;
+
+        GameObject partSys = transform.Find("Particle System").gameObject;
+        partSys.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,21 +56,39 @@ public class ParticleBehavior : MonoBehaviour
         // Particle radius
         if (!Waveform.active)
         {
+            
             // Only find radius component in "if" statements so we don't load it each update
-            Transform radius = transform.Find("radius");
-            radius.position = transform.position;
-            radius.GetComponent<SpriteRenderer>().enabled = false;
-            waveformLastPosition = radius.position;
-            radius.transform.localScale = new Vector2(2, 2);
+
+            //ParticleSystem particleSystem = this.GetComponentInChildren<ParticleSystem>();
+            //ParticleSystem.ShapeModule shape = particleSystem.shape;
+            //ParticleSystem.EmissionModule e = particleSystem.emission;
+
+            lastKnownPosition = this.transform.position;
+            //particleSystem.transform.position = this.transform.position;
+            
+            //shape.radius = 1.0f;
+            //particleSystem.gameObject.SetActive(false);
         }
         else
         {
-            Transform radius = transform.Find("radius");
+            
+            ParticleSystem particleSystem = this.GetComponentInChildren<ParticleSystem>();
+
+            if (particleSystem != null)
+            {
+                ParticleSystem.ShapeModule shape = particleSystem.shape;
+                ParticleSystem.EmissionModule e = particleSystem.emission;
+
+                particleSystem.transform.position = lastKnownPosition;
+                shape.radius += (speed * Time.deltaTime);
+            }
+
+            /*Transform radius = transform.Find("radius");
             radius.GetComponent<SpriteRenderer>().enabled = true;
             radius.position = waveformLastPosition;
 
             float velocityPlusOne = (speed * Time.deltaTime) + 1;
-            radius.localScale = new Vector2(radius.localScale.x + velocityPlusOne, radius.localScale.y + velocityPlusOne);
+            radius.localScale = new Vector2(radius.localScale.x + velocityPlusOne, radius.localScale.y + velocityPlusOne);*/
         }
 
         // check if player has just activated/deactivated waveform
@@ -94,6 +115,12 @@ public class ParticleBehavior : MonoBehaviour
                 break;
         }
 
+        GameObject partSys = transform.Find("Particle System").gameObject;
+        partSys.SetActive(true);
+
+        ParticleSystem particleSystem = partSys.GetComponent<ParticleSystem>();
+        ParticleSystem.ShapeModule shape = particleSystem.shape;
+        shape.radius = 0;
 
         // hide unless visibleInWaveform is enabled
         if (!visibleInWaveForm)
@@ -101,6 +128,8 @@ public class ParticleBehavior : MonoBehaviour
             renderer.enabled = false;
             effectContainer.SetActive(false);
         }
+
+        
 
 
         waveForm = true;
@@ -120,6 +149,9 @@ public class ParticleBehavior : MonoBehaviour
                 break;
         }
 
+
+        GameObject partSys = transform.Find("Particle System").gameObject;
+        partSys.SetActive(false);
 
         // unhide
         renderer.enabled = true;
