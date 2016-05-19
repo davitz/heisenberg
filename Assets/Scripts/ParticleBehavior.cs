@@ -215,13 +215,15 @@ public class ParticleBehavior : MonoBehaviour
                 }
             case ParticleType.C:
 
-                float x = speed;
-                float y = speed;
+                float cSpeed = Mathf.Sqrt(speed * speed / 2);
+
+                float x = cSpeed;
+                float y = cSpeed;
 
                 if (vel.x < 0)
-                { x = -speed; }
+                { x = -cSpeed; }
                 if (vel.y < 0)
-                { y = -speed; }
+                { y = -cSpeed; }
 
                 return new Vector2(x, y);
         }

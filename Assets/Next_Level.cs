@@ -8,6 +8,15 @@ public class Next_Level : MonoBehaviour {
     private GameObject MyGO;
     private bool KeyIsFound;
 
+
+    public static void loadNextLevel()
+    {
+        Debug.Log("load next level.");
+        Application.LoadLevel(Application.loadedLevel + 1);
+
+    }
+
+
     // Use this for initialization
     void Start ()
     {
@@ -22,7 +31,7 @@ public class Next_Level : MonoBehaviour {
             if (KeyIsFound) //Checks if the player has a key
             {
                 //Put the effect to go to the next level here
-                Debug.Log("You won, go home");
+                loadNextLevel();
             }
         }
     }

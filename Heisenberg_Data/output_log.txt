@@ -1,0 +1,46 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 670M (ID=0x1213)
+    Vendor:   NVIDIA
+    VRAM:     3020 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\projects\games\heisenberg\Heisenberg_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\projects\games\heisenberg\Heisenberg_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\projects\games\heisenberg\Heisenberg_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\projects\games\heisenberg\Heisenberg_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\projects\games\heisenberg\Heisenberg_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.055 seconds
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\projects\games\heisenberg\Heisenberg_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.620701 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.066006 ms
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 1591.
+Total: 0.575632 ms (FindLiveObjects: 0.078982 ms CreateObjectMapping: 0.026327 ms MarkObjects: 0.427039 ms  DeleteObjects: 0.042837 ms)
+
+Key is found
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.535466 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1591.
+Total: 0.856309 ms (FindLiveObjects: 0.107540 ms CreateObjectMapping: 0.036590 ms MarkObjects: 0.703699 ms  DeleteObjects: 0.007139 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1770 -> priority: 1 
+  Thread -> id: 2ad8 -> priority: 1 

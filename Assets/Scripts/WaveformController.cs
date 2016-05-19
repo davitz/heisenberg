@@ -21,6 +21,8 @@ public class WaveformController : MonoBehaviour
 
     Vector2 lastKnownPosition = Vector2.zero;
 
+    float radius;
+
 
     // Use this for initialization
     void Start()
@@ -54,7 +56,6 @@ public class WaveformController : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Fire1") && WaveFormEnergy > 4)
         {
-            
             IsOn();
         }
         else if (CrossPlatformInputManager.GetButtonUp("Fire1"))
@@ -80,14 +81,13 @@ public class WaveformController : MonoBehaviour
         {
             // Only find radius component in "if" statements so we don't load it each update
 
-            ParticleSystem particleSystem = this.GetComponentInChildren<ParticleSystem>();
-            ParticleSystem.ShapeModule shape = particleSystem.shape;
-            ParticleSystem.EmissionModule e = particleSystem.emission;
+           // ParticleSystem particleSystem = this.GetComponentInChildren<ParticleSystem>();
+           // ParticleSystem.ShapeModule shape = particleSystem.shape;
+           // ParticleSystem.EmissionModule e = particleSystem.emission;
 
-            particleSystem.transform.position = this.transform.position;
+           
             lastKnownPosition = this.transform.position;
-            e.enabled = false; // unity freaks the fuck out if we don't do it this way
-            shape.radius = 1.0f;
+            radius = 1.0f;
         }
         else
         {
@@ -99,7 +99,8 @@ public class WaveformController : MonoBehaviour
             ParticleSystem.EmissionModule e = particleSystem.emission;
 
             particleSystem.transform.position = lastKnownPosition;
-            shape.radius += (speed * Time.deltaTime) / 2;
+            radius += (speed * Time.deltaTime) / 2;
+            shape.radius = radius;
             e.enabled = true;
 
             /*

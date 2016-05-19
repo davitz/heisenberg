@@ -33,6 +33,9 @@ namespace UnityStandardAssets._2D
         private MeshRenderer mesh;
         private SpriteRenderer sprite;
         private GameObject visuals;
+        private GameObject waveFormVisuals;
+
+        private System.Random rand = new System.Random();
 
         void Start()
         {
@@ -40,6 +43,7 @@ namespace UnityStandardAssets._2D
             mesh = GetComponentInChildren<MeshRenderer>();
             sprite = GetComponent<SpriteRenderer>();
             visuals = transform.FindChild("HeisenbergVisuals").gameObject;
+            waveFormVisuals = transform.FindChild("ParticleSystemContainer").gameObject;
         }
 
 
@@ -62,7 +66,14 @@ namespace UnityStandardAssets._2D
 
         public void EnterWaveform()
         {
+            
             waveformVel = rigidBody.velocity;
+
+            if (waveformVel.magnitude == 0)
+            {
+                waveformVel.x = (float) rand.NextDouble() * 20 - 10;
+                waveformVel.y = (float) rand.NextDouble() * 20 - 10;
+            }
 
             rigidBody.gravityScale = 0;
 
@@ -72,6 +83,9 @@ namespace UnityStandardAssets._2D
                 //mesh.enabled = false;
                 //sprite.enabled = false;
             }
+            waveFormVisuals.SetActive(true);
+
+
             waveform = true;
         }
 
@@ -85,7 +99,9 @@ namespace UnityStandardAssets._2D
             visuals.SetActive(true);
             //mesh.enabled = true;
             //sprite.enabled = true;
-            
+
+            waveFormVisuals.SetActive(false);
+
         }
 
         private void Awake()

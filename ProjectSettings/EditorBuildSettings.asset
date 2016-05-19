@@ -10,6 +10,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Level Scene.unity
   - enabled: 1
-    path: Assets/Scenes/Second Level.unity
+    path: Assets/Scenes/Second Level _ Jess.unity
   - enabled: 1
     path: Assets/Scenes/Third Level.unity
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+  - enabled: 0
+    path: Assets/Scenes/Second Level.unity
